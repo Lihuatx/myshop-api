@@ -14,7 +14,7 @@ import (
 
 func Register(address string, port int, name string, tags []string, id string) error {
 	cfg := api.DefaultConfig()
-	cfg.Address = "172.26.240.124:8500"
+	cfg.Address = "172.26.226.16:8500"
 
 	client, err := api.NewClient(cfg)
 	if err != nil {
@@ -22,7 +22,7 @@ func Register(address string, port int, name string, tags []string, id string) e
 	}
 	//生成对应的检查对象
 	check := &api.AgentServiceCheck{
-		HTTP:                           "http://172.26.240.109:8021/health",
+		HTTP:                           "http://172.26.226.4:8021/health",
 		Timeout:                        "5s",
 		Interval:                       "5s",
 		DeregisterCriticalServiceAfter: "10s",
@@ -124,8 +124,6 @@ func main() {
 		CacheDir:            "tmp/nacos/cache",
 		LogLevel:            "debug",
 	}
-	fmt.Println(sc)
-	fmt.Println(cc)
 	//
 	configClient, _ := clients.CreateConfigClient(map[string]interface{}{
 		"serverConfigs": sc,
