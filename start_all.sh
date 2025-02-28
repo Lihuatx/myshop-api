@@ -6,14 +6,17 @@ cd $SCRIPT_DIR
 
 echo "启动 goods-web 服务..."
 ./start.sh
+sleep 1
 
 echo "启动 order-web 服务..."
 cd ../../order-web/target
 ./start.sh
+sleep 1
 
 echo "启动 user-web 服务..."
 cd ../../user-web/target
 ./start.sh
+sleep 1
 
 echo "启动 userop-web 服务..."
 cd ../../userop-web/target

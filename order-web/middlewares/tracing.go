@@ -2,7 +2,7 @@ package middlewares
 
 import (
 	"fmt"
-	"myshop_api/goods-web/global"
+	"myshop_api/order-web/global"
 
 	"github.com/gin-gonic/gin"
 	"github.com/opentracing/opentracing-go"
